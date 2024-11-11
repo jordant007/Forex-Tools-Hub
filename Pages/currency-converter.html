@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter - Forex Beginners Hub</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <span class="logo-icon">⚡</span>
+                <span class="logo-text">Forex Beginners Hub</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/Pages/pip-calculator.html">Pip Calculator</a></li>
+                <li><a href="/Pages/position-size.html">Position Size</a></li>
+                <li><a href="/Pages/currency-converter.html" class="active">Currency Converter</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="calculator-section">
+            <h1>Currency Converter</h1>
+            <p class="calculator-description">Convert between different currencies using real-time exchange rates to plan your trades effectively.</p>
+            
+            <div class="guide-container">
+                <div class="guide-image">
+                    <img src="/assets/images/currency convertor image.jpeg" alt="Currency conversion example" class="guide-img">
+                </div>
+                <div class="guide-steps">
+                    <h2>How to Use the Currency Converter</h2>
+                    <ol class="steps-list">
+                        <li>Enter the amount you want to convert in the "Amount" field</li>
+                        <li>Select the currency you're converting from in the "From Currency" dropdown</li>
+                        <li>Select the currency you want to convert to in the "To Currency" dropdown</li>
+                        <li>Use the swap button to quickly reverse the conversion</li>
+                        <li>Click "Convert Currency" to see the result</li>
+                    </ol>
+                    <div class="tip-box">
+                        <h3>💡 Pro Tip</h3>
+                        <p>Keep track of major currency pairs:<br>
+                           EUR/USD - Euro/US Dollar<br>
+                           GBP/USD - British Pound/US Dollar<br>
+                           USD/JPY - US Dollar/Japanese Yen</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="calculator-form">
+                <div class="form-group">
+                    <label for="from-amount">Amount</label>
+                    <input type="number" id="from-amount" min="0" step="0.01" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="from-currency">From Currency</label>
+                    <select id="from-currency" required>
+                        <option value="USD">US Dollar (USD)</option>
+                        <option value="EUR">Euro (EUR)</option>
+                        <option value="GBP">British Pound (GBP)</option>
+                        <option value="JPY">Japanese Yen (JPY)</option>
+                        <option value="CHF">Swiss Franc (CHF)</option>
+                        <option value="AUD">Australian Dollar (AUD)</option>
+                    </select>
+                </div>
+
+                <button type="button" id="swap-currencies" class="swap-button">↔️ Swap Currencies</button>
+
+                <div class="form-group">
+                    <label for="to-currency">To Currency</label>
+                    <select id="to-currency" required>
+                        <option value="EUR">Euro (EUR)</option>
+                        <option value="USD">US Dollar (USD)</option>
+                        <option value="GBP">British Pound (GBP)</option>
+                        <option value="JPY">Japanese Yen (JPY)</option>
+                        <option value="CHF">Swiss Franc (CHF)</option>
+                        <option value="AUD">Australian Dollar (AUD)</option>
+                    </select>
+                </div>
+
+                <button type="button" id="convert-currency" class="cta-button">Convert Currency</button>
+
+                <div class="result-section" id="converter-result">
+                    <h3>Conversion Result</h3>
+                    <div class="result-grid">
+                        <div class="result-item">
+                            <span class="result-label">Converted Amount:</span>
+                            <span class="result-value" id="converted-amount">0.00</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-label">Exchange Rate:</span>
+                            <span class="result-value" id="exchange-rate">1.0000</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="newsletter">
+            <h3>Subscribe to our newsletter</h3>
+            <form id="newsletter-form">
+                <input type="email" placeholder="Enter your email">
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+        <div class="footer-content">
+            <p>&copy; 2024 Forex Beginners Hub. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="/js/currency-converter.js"></script>
+</body>
+</html>
