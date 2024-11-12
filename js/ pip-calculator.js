@@ -36,5 +36,5 @@ document.addEventListener('DOMContentLoaded', function() {
             pipValue = (0.01 * lotValue) / exchangeRates[currencyPair];
         } else {
             // For other pairs, 1 pip = 0.0001
-            pipValue = (0.0001 * lotValue);
+            pipValue = (0.0001 * lotValue):
         }
