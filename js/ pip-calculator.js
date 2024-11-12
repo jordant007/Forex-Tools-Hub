@@ -23,14 +23,14 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
 
-        // Standard lot size
+        //  lot size
         const standardLot = 100000;
         
-        // Calculate pip value based on currency pair
+        //  pip value 
         let pipValue = 0;
         const lotValue = positionSize * standardLot;
 
-        // Calculate pip value based on currency pair type
+        //  pip value based on currency pair type
         if (currencyPair.endsWith('JPY')) {
             // For JPY pairs, 1 pip = 0.01
             pipValue = (0.01 * lotValue) / exchangeRates[currencyPair];
@@ -38,29 +38,3 @@ document.addEventListener('DOMContentLoaded', function() {
             // For other pairs, 1 pip = 0.0001
             pipValue = (0.0001 * lotValue);
         }
-
-        // Convert to account currency if necessary
-        if (accountCurrency !== 'USD') {
-            // Would normally use real exchange rates here
-            const conversionRates = {
-                'EUR': 0.91,
-                'GBP': 0.79
-            };
-            pipValue = pipValue * conversionRates[accountCurrency];
-        }
-
-        //result
-        pipValueDisplay.textContent = `${accountCurrency} ${pipValue.toFixed(2)}`;
-        
-        //  result section
-        document.getElementById('pip-result').style.display = 'block';
-    }
-
-    // Form validation
-    document.getElementById('position-size').addEventListener('input', function(e) {
-        const value = parseFloat(e.target.value);
-        if (value < 0.01) {
-            e.target.value = 0.01;
-        }
-    });
-});
