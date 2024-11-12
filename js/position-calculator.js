@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const positionSizeResult = document.getElementById('position-size-result');
     const riskAmountResult = document.getElementById('risk-amount');
 
-    // Exchange rates (would normally come from an API)
+    
     const exchangeRates = {
         'EUR/USD': 1.0950,
         'GBP/USD': 1.2650,
@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
 
-        // Calculate risk amount
+        //  risk amount
         const riskAmount = accountBalance * (riskPercentage / 100);
 
         // Standard lot size
@@ -39,10 +39,10 @@ document.addEventListener('DOMContentLoaded', function() {
             pipValue = (0.0001 * standardLot);
         }
 
-        // Calculate position size in lots
+        //  position size in lots
         const positionSize = (riskAmount / (stopLoss * pipValue)).toFixed(2);
 
-        // Display results
+        // results
         positionSizeResult.textContent = positionSize;
         riskAmountResult.textContent = `$${riskAmount.toFixed(2)}`;
         

@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const calculateButton = document.getElementById('calculate-pip');
     const pipValueDisplay = document.getElementById('pip-value');
     
-    // Exchange rates (would normally come from an API)
+    
     const exchangeRates = {
         'EUR/USD': 1.0950,
         'GBP/USD': 1.2650,
@@ -49,10 +49,10 @@ document.addEventListener('DOMContentLoaded', function() {
             pipValue = pipValue * conversionRates[accountCurrency];
         }
 
-        // Display result
+        //result
         pipValueDisplay.textContent = `${accountCurrency} ${pipValue.toFixed(2)}`;
         
-        // Show result section
+        //  result section
         document.getElementById('pip-result').style.display = 'block';
     }
 

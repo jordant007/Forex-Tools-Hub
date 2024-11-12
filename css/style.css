@@ -485,26 +485,7 @@ footer {
     color: var(--primary-color);
 }
 
-/* :root {
-    --primary-color: #000000;
-    --secondary-color: #FFD700;
-    --accent-color: #1a1a1a;
-    --text-color: #ffffff;
-    --card-bg: #111111;
-} */
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
-}
-
-body {
-    background-color: var(--primary-color);
-    color: var(--text-color);
-    line-height: 1.6;
-}
 
 /* Header and Navigation */
 nav {
