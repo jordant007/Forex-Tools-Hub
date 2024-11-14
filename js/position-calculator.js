@@ -25,4 +25,45 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
 
-       
+        //  risk amount
+        const riskAmount = accountBalance * (riskPercentage / 100);
+
+        // Standard lot size
+        const standardLot = 100000;
+
+        // Calculate pip value based on currency pair type
+        let pipValue;
+        if (currencyPair.endsWith('JPY')) {
+            pipValue = (0.01 * standardLot) / exchangeRates[currencyPair];
+        } else {
+            pipValue = (0.0001 * standardLot);
+        }
+
+        //  position size in lots
+        const positionSize = (riskAmount / (stopLoss * pipValue)).toFixed(2);
+
+        // results
+        positionSizeResult.textContent = positionSize;
+        riskAmountResult.textContent = `$${riskAmount.toFixed(2)}`;
+        
+        // Show result section
+        document.getElementById('position-result').style.display = 'block';
+    }
+
+    // Form validation
+    document.getElementById('risk-percentage').addEventListener('input', function(e) {
+        const value = parseFloat(e.target.value);
+        if (value < 0.1) {
+            e.target.value = 0.1;
+        } else if (value > 10) {
+            e.target.value = 10;
+        }
+    });
+
+    document.getElementById('stop-loss').addEventListener('input', function(e) {
+        const value = parseFloat(e.target.value);
+        if (value < 1) {
+            e.target.value = 1;
+        }
+    });
+});
