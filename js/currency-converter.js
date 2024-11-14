@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const convertedAmountDisplay = document.getElementById('converted-amount');
     const exchangeRateDisplay = document.getElementById('exchange-rate');
 
-    // Exchange rates (would normally come from an API)
+    // Exchange rates 
     const exchangeRates = {
         'USD': 1.0000,
         'EUR': 0.9150,
@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const fromCurrency = document.getElementById('from-currency');
         const toCurrency = document.getElementById('to-currency');
         
-        // Swap selected values
+        // Swap values
         const temp = fromCurrency.value;
         fromCurrency.value = toCurrency.value;
         toCurrency.value = temp;
