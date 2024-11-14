@@ -55,6 +55,20 @@ nav {
     color: var(--secondary-color);
 }
 
+/* Hamburger Menu Styles */
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: var(--text-color);
+    transition: all 0.3s ease-in-out;
+}
 /* Hero Section */
 .hero {
     text-align: center;
@@ -365,7 +379,7 @@ footer {
     }
 }
 
-/* Additional styles for result items */
+/* styles for result items */
 .result-grid {
     display: grid;
     gap: 1rem;
@@ -390,7 +404,7 @@ footer {
     color: var(--text-color);
 }
 
-/* Result section header */
+/* Result  header */
 .result-section h3 {
     color: var(--secondary-color);
     margin-bottom: 0.5rem;
@@ -569,5 +583,45 @@ nav {
     
     .calculator-section {
         padding: 2rem 1rem;
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-links {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        background-color: var(--accent-color);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        padding: 20px 0;
+    }
+
+    .nav-links.active {
+        left: 0;
+    }
+
+    .nav-links li {
+        margin: 16px 0;
     }
 }

@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
         fromCurrency.value = toCurrency.value;
         toCurrency.value = temp;
         
-        // If there's already a conversion shown, update it
+        // If conversion shown, update it
         if (document.getElementById('converter-result').style.display === 'block') {
             convertCurrency();
         }
