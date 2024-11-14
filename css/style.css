@@ -59,7 +59,7 @@ nav {
 .hero {
     text-align: center;
     padding: 4rem 1rem;
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('/assets/images/nice\ background\ image.jpeg');
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../assets/images/nice\ background\ image.jpeg');
     background-size: cover;
     background-position: center;
     height: 60vh;
